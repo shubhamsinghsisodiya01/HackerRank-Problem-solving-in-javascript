@@ -1,0 +1,17 @@
+function breakingRecords(scores) {
+        var high = scores[0];
+        var low = scores[0];
+        var worst = 0;
+        var most = 0;
+        for (var i = 0; i < scores.length; i++) {
+            if (scores[i] > high) {
+                high = scores[i];
+                most++;
+            }
+            if (scores[i] < low) {
+                low = scores[i];
+                worst++;
+            }
+        }
+        return [most, worst];
+    }
