@@ -1,0 +1,11 @@
+function getTotalX(a, b) {
+    var total = 0;
+    for (let x = 1; x <= 100; x++) { //loop
+        if (a.every(int => (x % int == 0))) { //x is divisble by every int of a
+            if (b.every(int => (int % x == 0))) { //every integer is divisible by x
+                total++;
+            }
+        }
+    }
+    return total;
+}
